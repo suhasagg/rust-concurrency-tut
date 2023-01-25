@@ -24,3 +24,9 @@ fn main() {
         println!("{:?}", subset);
     }
 }
+
+
+//In this example, the power_set function is called concurrently using the thread::spawn method. The power_set function generates the power set of the given set using backtracking, where the idx parameter represents the current position in the set and the current parameter represents the current subset. The tx parameter is used to send the subsets to the main thread.
+//The power_set function makes a choice to either include or exclude the current element and recursively calls itself for the next element.
+//The mpsc::channel is used to create channels that allow communication between different threads.
+//It's important to note that this approach might not be the most efficient for large sets, and other approaches should be considered

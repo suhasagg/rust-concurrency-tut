@@ -66,3 +66,4 @@ func main() {
     go publisher.broadcast()
 
     publisher.Publish(Event{Name: "Event 1", Data: "Hello, World"})
+}
